@@ -1,0 +1,26 @@
+структура проекта
+simka_bot/
+│
+├── bot.py                # Основной файл бота
+├── config.py             # Конфигурация (токен и другие настройки)
+├── handlers.py           # Обработчики команд и сообщений
+├── images/               # Папка с изображениями
+│   ├── logo.png
+│   └── services.png
+└── requirements.txt      # Зависимости
+
+
+
+
+Запустите бота, выполнив команду:
+
+python bot.py
+
+pip install -r requirements.txt
+
+chat_id = message.chat.id  # Добавлено для получения chat_id
+logo = 'images/logo.png'  # Добавлено для указания пути к изображению
+await bot.send_photo(chat_id, logo)  # Изменено для использования await
+https://t.me/ваш_бот_юзернейм
+https://t.me/simka_Birsk_bot
+
