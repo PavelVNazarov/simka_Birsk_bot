@@ -13,18 +13,18 @@ dp = Dispatcher(bot)
 register_handlers(dp, bot)
 
 # Добавление обработчика для команды /start
-@dp.message_handler(commands=['start'])
-async def send_welcome(message: types.Message):
-    chat_id = message.chat.id  # Получение chat_id
-    logo = InputFile('images/logo.png')  # Используем InputFile для локального файла
-    await bot.send_photo(chat_id, logo)  # Отправка изображения
-    await message.reply("Добро пожаловать в салон услуг печати 'Симка'!", reply_markup=main_menu())
+# @dp.message_handler(commands=['start'])
+# async def send_welcome(message: types.Message):
+#     chat_id = message.chat.id  # Получение chat_id
+#     logo = InputFile('images/logo.png')  # Используем InputFile для локального файла
+#     await bot.send_photo(chat_id, logo)  # Отправка изображения
+#     await message.reply("Добро пожаловать в салон услуг печати 'Симка'!", reply_markup=main_menu())
 
-def main_menu():
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    buttons = ["Услуги", "Прайс", "Контакты", "Режим работы"]
-    keyboard.add(*buttons)
-    return keyboard
+# def main_menu():
+#     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
+#     buttons = ["Услуги", "Прайс", "Контакты", "Режим работы"]
+#     keyboard.add(*buttons)
+#     return keyboard
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
